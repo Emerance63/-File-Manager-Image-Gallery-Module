@@ -5,7 +5,16 @@ import { PiSignOutThin } from "react-icons/pi";
 import { MdHelp } from "react-icons/md";
 import { IoNotifications } from "react-icons/io5";
 import { IoIosHeartHalf } from "react-icons/io";
+import { NavLink } from "react-router-dom";
+
 export default function Sidebar() {
+  const linkClass = ({ isActive }) =>
+    `flex items-center gap-3 py-2 px-3 rounded-lg transition-all duration-150 font-medium ${
+      isActive
+        ? "bg-blue-50 text-blue-600 font-semibold"
+        : "text-gray-500 hover:bg-gray-50 hover:text-gray-700"
+    }`;
+
   return (
     <aside className="hidden lg:flex flex-col w-64 bg-white border-r border-gray-200 p-6">
       <div className="flex flex-col items-center gap-3 mb-6">
@@ -43,47 +52,35 @@ export default function Sidebar() {
     <div className="text-xs text-gray-700 uppercase mb-2 border-t border-gray-200 pb-2 tracking-[0.3em] font-semibold py-3 px-3">File Manager</div>
         <ul className="space-y-2">
        
-       <div className="flex items-center border-b border-gray-200 gap-3 py-4 px-3 rounded hover:bg-gray-50 text-gray-500">
+          <li>
+            <NavLink to="/file-manager/dashboard" className={linkClass}>
+              <FaDashcube /> <span>Dashboard</span>
+            </NavLink>
+          </li>
 
-        <FaDashcube /> <span>Dashboard</span>
-        
-       </div>
-
-       <div className="flex items-center gap-3  tracking-[0.1em] ">
+          <div className="flex items-center gap-3 tracking-[0.1em] text-xs font-bold text-gray-400 uppercase pt-3 pb-1 px-3">
             <span>PAGES</span>
-        </div>
+          </div>
 
           <li>
-            <a
-              href="#"
-              className="flex items-center gap-3 py-2 px-3 rounded hover:bg-gray-50 text-gray-500"
-            >
+            <NavLink to="/file-manager/images" className={linkClass}>
               <FaImage /> <span>Image</span>
-            </a>
+            </NavLink>
           </li>
           <li>
-            <a
-              href="#"
-              className="flex items-center gap-3 py-2 px-3 rounded hover:bg-gray-50 text-gray-700"
-            >
+            <NavLink to="/file-manager/videos" className={linkClass}>
               <FaVideo /> <span>Video</span>
-            </a>
-          </li>
-           <li>
-            <a
-              href="#"
-              className="flex items-center gap-3 py-2 px-3 rounded hover:bg-gray-50 text-gray-700"
-            >
-              <FaFile /> <span>All Files</span>
-            </a>
+            </NavLink>
           </li>
           <li>
-            <a
-              href="#"
-              className="flex items-center gap-3 py-2 px-3 rounded hover:bg-gray-50 text-gray-700"
-            >
+            <NavLink to="/file-manager/all-files" className={linkClass}>
+              <FaFile /> <span>All Files</span>
+            </NavLink>
+          </li>
+          <li>
+            <NavLink to="/file-manager/trash" className={linkClass}>
               <FaTrash /> <span>Trash</span>
-            </a>
+            </NavLink>
           </li>
         </ul>
       </nav>
