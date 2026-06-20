@@ -1,17 +1,20 @@
-import React from 'react';
-import { Routes, Route, Navigate } from 'react-router-dom';
-import AppLayout from './components/AppLayout';
-;
+import React from "react";
+import { Routes, Route, Navigate } from "react-router-dom";
+import AppLayout from "./components/AppLayout";
+import Dashboard from "./pages/Dashboard";
+import FilesView from "./pages/FilesView";
+import TrashView from "./pages/TrashView";
 
 export default function App() {
   return (
     <Routes>
-      {/* Root Fallback Redirection */}
-      <Route path="/" element={<Navigate to="/file-manager/dashboard" replace />} />
-      <Route path="/file-manager" element={<Navigate to="/file-manager/dashboard" replace />} />
-      
-      {/* Parent Application Layout Wrapper Route */}
+      <Route
+        path="/"
+        element={<Navigate to="/file-manager/dashboard" replace />}
+      />
+
       <Route path="/file-manager" element={<AppLayout />}>
+        <Route index element={<Navigate to="dashboard" replace />} />
         <Route path="dashboard" element={<Dashboard />} />
         <Route path="images" element={<FilesView typeFilter="image" />} />
         <Route path="videos" element={<FilesView typeFilter="video" />} />
@@ -20,8 +23,10 @@ export default function App() {
         <Route path="trash" element={<TrashView />} />
       </Route>
 
-      {/* Wildcard 404 Error Catchall Route */}
-      <Route path="*" element={<Navigate to="/file-manager/dashboard" replace />} />
+      <Route
+        path="*"
+        element={<Navigate to="/file-manager/dashboard" replace />}
+      />
     </Routes>
   );
 }
