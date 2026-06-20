@@ -2,6 +2,9 @@ import React from "react";
 import { BiSearch, BiBell, BiCartAlt, BiMenu } from "react-icons/bi";
 import { FaHome, FaRegCopy, FaThLarge, FaLayerGroup } from "react-icons/fa";
 import { useFiles } from "../context/FileContext";
+import { FaShoppingCart } from "react-icons/fa";
+import { IoPerson } from "react-icons/io5";
+import { AiOutlineExpandAlt } from "react-icons/ai";
 
 export default function Topbar() {
   const { searchQuery, setSearchQuery } = useFiles();
@@ -33,8 +36,7 @@ export default function Topbar() {
       </div>
 
     
-
-      <div className="flex items-center gap-4 w-1/3 max-w-xl justify-end">
+<div className="flex items-center gap-4 w-1/3 max-w-xl justify-end">
 
        <div className="text-xs text-gray-500 px-1">A</div>
         <div className="bg-blue-600 text-white rounded-md px-2 py-1">A</div>
@@ -50,19 +52,29 @@ export default function Topbar() {
             className="w-full bg-transparent text-sm focus:outline-none"
           />
         </div>
+        <div>
 
-        <div className="flex items-center gap-3">
-          <button className="p-2 text-gray-500 hover:bg-gray-100 rounded-full relative">
-            <BiBell className="w-5 h-5" />
-            <span className="absolute top-0 right-0 w-2 h-2 bg-red-500 rounded-full"></span>
-          </button>
-          <button className="p-2 text-gray-500 hover:bg-gray-100 rounded-full">
-            <BiCartAlt className="w-5 h-5" />
-          </button>
+          <div className="flex gap-3 ">
+                  <div className="flex items-center gap-3 bg-blue-600 text-white rounded-full px-2 py-1">
+                     <FaShoppingCart/> 
+                  </div>
 
-          
+           <div className="flex gap-3 ">
+                  <div className="flex items-center gap-3 bg-blue-600 text-white rounded-full px-2 py-1">
+                     <IoPerson /> 
+                  </div>
+
+            <div className="flex gap-3 ">
+                  <div className="flex items-center gap-3 bg-blue-600 text-white rounded-full px-2 py-1">
+                     <AiOutlineExpandAlt /> 
+            </div>      </div>
+
+          </div>
         </div>
-      </div>
+        </div>
+          
+        
+</div>
     </header>
   );
 }
