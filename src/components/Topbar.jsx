@@ -9,7 +9,7 @@ export default function Topbar() {
   return (
     <header className="sticky top-0 z-50 bg-white border-b border-gray-200 h-16 flex items-center justify-between px-6">
       <div className="flex items-center gap-4">
-        <div className="flex items-center gap-3 font-bold text-xl text-blue-600">
+        <div className="flex items-center gap-3 font-bold text-xl text-black">
           <div className="bg-blue-100 text-blue-600 rounded-full p-2">
             <FaLayerGroup className="w-5 h-5" />
           </div>
