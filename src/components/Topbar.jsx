@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { BiSearch, BiBell, BiCartAlt, BiMenu } from "react-icons/bi";
 import { FaHome, FaRegCopy, FaThLarge, FaLayerGroup } from "react-icons/fa";
 import { useFiles } from "../context/FileContext";
@@ -113,6 +113,12 @@ const elementsItems = [
 ];
 
 export default function Topbar() {
+  const [personOpen, setPersonOpen] = useState(false);
+  const personItems = [
+    { label: "Profile", link: "/profile" },
+    { label: "Settings", link: "/settings" },
+    { label: "Logout", link: "/logout" },
+  ];
   const { searchQuery, setSearchQuery } = useFiles();
 
   return (
@@ -135,12 +141,12 @@ export default function Topbar() {
         </nav>
       </div>
 
-    
-<div className="flex items-center gap-4 w-1/3 max-w-xl justify-end">
 
-       <div className="text-xs text-gray-500 px-1">A</div>
+      <div className="flex items-center gap-4 w-1/3 max-w-xl justify-end">
+
+        <div className="text-xs text-gray-500 px-1">A</div>
         <div className="bg-blue-600 text-white rounded-md px-2 py-1">A</div>
-         <div className="text-gray-700 text-2xl rounded-md px-2 py-1">A</div>
+        <div className="text-gray-700 text-2xl rounded-md px-2 py-1">A</div>
 
         <div className="flex items-center gap-3 bg-gray-30 border border-gray-300 rounded-lg px-3 py-1.5 w-80">
           <BiSearch className="w-3 h-7 text-gray-400" />
@@ -154,28 +160,35 @@ export default function Topbar() {
         </div>
         <div>
 
-          <div className="flex gap-3 ">
-                  <div className="flex items-center gap-3 bg-blue-600 text-white rounded-full px-2 py-1">
-                     <FaShoppingCart/> 
-                  </div>
-
-           <div className="flex gap-3 ">
-                  <div className="flex items-center gap-3 bg-blue-600 text-white rounded-full px-2 py-1">
-                     <IoPerson /> 
-                  </div>
-
-            <div className="flex gap-3 ">
-                  <div className="flex items-center gap-3 bg-blue-600 text-white rounded-full px-2 py-1">
-                     <AiOutlineExpandAlt />  
-                     </div>     
-            </div>
-
+          <div className="relative flex gap-3">
+            <button
+              onClick={() => setPersonOpen(!personOpen)}
+              className="flex items-center gap-3 bg-blue-600 text-white rounded-full px-2 py-1 focus:outline-none"
+            >
+              <IoPerson />
+            </button>
+            {personOpen && (
+              <div className="absolute right-0 mt-2 w-48 bg-white border border-gray-100 rounded-xl shadow-xl py-2 z-50 animate-in fade-in slide-in-from-top-2 duration-150">
+                <div className="flex flex-col gap-0.5">
+                  {personItems.map((item, idx) => (
+                    <a
+                      key={idx}
+                      href={item.link}
+                      className="block px-3 py-2 text-sm text-gray-600 hover:bg-blue-50 hover:text-blue-600 transition-colors duration-150 rounded-lg font-medium"
+                    >
+                      {item.label}
+                    </a>
+                  ))}
+                </div>
+              </div>
+            )}
           </div>
+
+
         </div>
-        </div>
-          
-        
-</div>
+
+
+      </div>
     </header>
   );
 }
