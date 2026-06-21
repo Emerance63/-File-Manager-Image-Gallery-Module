@@ -35,7 +35,7 @@ export default function Dashboard() {
   const usedPercentage = Math.min((totalUsedSize / totalCapacity) * 100, 100).toFixed(1);
 
   // Recent files (active, sorted or just first few)
-  const recentFiles = activeFiles.slice(0, 5);
+  const recentFiles = activeFiles.slice(0, 16);
 
   return (
     <div className="flex flex-col gap-8">
