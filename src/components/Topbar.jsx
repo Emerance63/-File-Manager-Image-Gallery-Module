@@ -86,7 +86,7 @@ export default function Topbar() {
           <AiOutlineExpandAlt className="w-5 h-5" />
         </button>
       </div>
-      {/* Mobile menu button */}
+      {/* Mobile menu button ,Stops the browser's default behavior.;Stops the click event from bubbling up to parent elements*/}
       <button type="button" className="md:hidden text-gray-600" onClick={(e) => { e.preventDefault(); e.stopPropagation(); setMobileOpen(!mobileOpen); }}>
         <BiMenu className="w-6 h-6" />
       </button>
