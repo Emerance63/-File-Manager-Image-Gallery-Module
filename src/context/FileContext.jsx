@@ -11,7 +11,7 @@ const initialFiles = [
     createdAt: "Dec 13, 2020",
     lastOpened: "just now",
     isTrash: false,
-    thumbnail: "https://picsum.photos/400/260?random=1",
+    thumbnail: "/hero.png",
   },
   {
     id: "img-2",
@@ -20,7 +20,7 @@ const initialFiles = [
     createdAt: "Dec 13, 2020",
     lastOpened: "2 day ago",
     isTrash: false,
-    thumbnail: "https://picsum.photos/400/260?random=2",
+    thumbnail: "/hero.png",
   },
   {
     id: "img-3",
@@ -29,7 +29,7 @@ const initialFiles = [
     createdAt: "Dec 13, 2020",
     lastOpened: "a month ago",
     isTrash: false,
-    thumbnail: "https://picsum.photos/400/260?random=3",
+    thumbnail: "/hero.png",
   },
   {
     id: "img-4",
@@ -38,7 +38,7 @@ const initialFiles = [
     createdAt: "Dec 13, 2020",
     lastOpened: "2 day ago",
     isTrash: false,
-    thumbnail: "https://picsum.photos/400/260?random=4",
+    thumbnail: "/hero.png",
   },
   {
     id: "img-5",
@@ -47,7 +47,7 @@ const initialFiles = [
     createdAt: "Dec 13, 2020",
     lastOpened: "just now",
     isTrash: false,
-    thumbnail: "https://picsum.photos/400/260?random=5",
+    thumbnail: "/hero.png",
   },
   {
     id: "img-6",
@@ -56,7 +56,7 @@ const initialFiles = [
     createdAt: "Dec 13, 2020",
     lastOpened: "2 days ago",
     isTrash: false,
-    thumbnail: "https://picsum.photos/400/260?random=6",
+    thumbnail: "/hero.png",
   },
   {
     id: "img-7",
@@ -65,7 +65,7 @@ const initialFiles = [
     createdAt: "Dec 13, 2020",
     lastOpened: "a month ago",
     isTrash: false,
-    thumbnail: "https://picsum.photos/400/260?random=7",
+    thumbnail: "/hero.png",
   },
   {
     id: "img-8",
@@ -74,7 +74,7 @@ const initialFiles = [
     createdAt: "Dec 13, 2020",
     lastOpened: "a week ago",
     isTrash: false,
-    thumbnail: "https://picsum.photos/400/260?random=8",
+    thumbnail: "/hero.png",
   },
 
   // Videos
@@ -85,7 +85,7 @@ const initialFiles = [
     createdAt: "Dec 13, 2020",
     lastOpened: "just now",
     isTrash: false,
-    thumbnail: "https://picsum.photos/400/260?random=9",
+    thumbnail: "/hero.png",
   },
   {
     id: "vid-2",
@@ -94,7 +94,7 @@ const initialFiles = [
     createdAt: "Dec 13, 2020",
     lastOpened: "2 day ago",
     isTrash: false,
-    thumbnail: "https://picsum.photos/400/260?random=10",
+    thumbnail: "/hero.png",
   },
   {
     id: "vid-3",
@@ -103,7 +103,7 @@ const initialFiles = [
     createdAt: "Dec 13, 2020",
     lastOpened: "a month ago",
     isTrash: false,
-    thumbnail: "https://picsum.photos/400/260?random=11",
+    thumbnail: "/hero.png",
   },
   {
     id: "vid-4",
@@ -112,7 +112,7 @@ const initialFiles = [
     createdAt: "Dec 13, 2020",
     lastOpened: "a month ago",
     isTrash: false,
-    thumbnail: "https://picsum.photos/400/260?random=12",
+    thumbnail: "/hero.png",
   },
 
   // Documents
@@ -233,7 +233,7 @@ const initialFiles = [
     createdAt: "Dec 13, 2020",
     lastOpened: "a week ago",
     isTrash: true,
-    thumbnail: "https://picsum.photos/400/260?random=21",
+    thumbnail: "/hero.png",
   },
   {
     id: "trash-img-2",
@@ -242,7 +242,7 @@ const initialFiles = [
     createdAt: "Dec 13, 2020",
     lastOpened: "2 days ago",
     isTrash: true,
-    thumbnail: "https://picsum.photos/400/260?random=22",
+    thumbnail: "/hero.png",
   }
 ];
 

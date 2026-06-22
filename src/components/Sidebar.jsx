@@ -16,9 +16,9 @@ export default function Sidebar() {
     }`;
 
   return (
-    <aside className="hidden lg:flex flex-col  bg-white border-r border-gray-200 p-6 fixed left-0 top-0 w-64 h-screen">
+    <aside className="hidden lg:flex flex-col bg-white border-r border-gray-200 p-6 fixed left-0 top-16 w-64 h-[calc(100vh-4rem)] overflow-y-auto pb-20">
       <div className="flex flex-col items-center gap-3 mb-6">
-        <div className="w-17 h-17 rounded-xl overflow-hidden bg-white">
+        <div className="w-16 h-16 rounded-xl overflow-hidden bg-white">
           <img
             src="https://i.pravatar.cc/80"
             alt="avatar"
@@ -48,7 +48,7 @@ export default function Sidebar() {
        
       </div>
 
-      <nav className="flex-1">
+      <nav className="">
     <div className="text-xs text-gray-700 uppercase mb-2 border-t border-gray-200 pb-2 tracking-[0.3em] font-semibold py-3 px-3">File Manager</div>
         <ul className="space-y-2">
        
@@ -85,7 +85,7 @@ export default function Sidebar() {
         </ul>
       </nav>
 
-      <div className="mt-4 text-sm text-gray-500 tracking-[0.2em] py-3 border-t border-gray-200">OTHER</div>
+      <div className="mt-auto pt-4 text-sm text-gray-500 tracking-[0.2em] py-3 border-t border-gray-200">OTHER</div>
       <ul className="mt-2 space-y-2 text-sm">
         <li>
           <a href="#" className="text-gray-700 hover:text-blue-600 flex gap-4 items-center py-2 px-3 ">
