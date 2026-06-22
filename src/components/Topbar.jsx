@@ -92,7 +92,7 @@ export default function Topbar() {
       </button>
       {mobileOpen && (
         <div className="fixed inset-0 z-40">
-          <div className="absolute inset-0 bg-black bg-opacity-30" onClick={() => setMobileOpen(false)} />
+          <div className="absolute inset-0 bg-black/40 bg-opacity-30" onClick={() => setMobileOpen(false)} />
           <div className="absolute left-0 top-0 w-64 h-full bg-white shadow-lg p-4 flex flex-col overflow-y-auto">
             <button className="self-end mb-4 text-gray-600" onClick={() => setMobileOpen(false)}>
               <BiX className="w-6 h-6" />
