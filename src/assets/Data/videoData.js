@@ -1,0 +1,12 @@
+export const videoData = [
+  { id: "vid-001", name: "Mountain Hike Adventure.mp4", type: "video", createdAt: "Jan 10, 2024", lastOpened: "just now", isTrash: false, thumbnail: "https://img.youtube.com/vi/2Vv-BfVoq4g/hqdefault.jpg", size: "120mb", tags: ["nature", "adventure"] },
+  { id: "vid-002", name: "Ocean Documentary.mp4", type: "video", createdAt: "Feb 5, 2024", lastOpened: "2 days ago", isTrash: false, thumbnail: "https://img.youtube.com/vi/BHACKCNDMW8/hqdefault.jpg", size: "85mb", tags: ["ocean", "documentary"] },
+  { id: "vid-003", name: "City Timelapse.mkv", type: "video", createdAt: "Mar 14, 2024", lastOpened: "a week ago", isTrash: false, thumbnail: "https://img.youtube.com/vi/LXb3EKWsInQ/hqdefault.jpg", size: "200mb", tags: ["city", "timelapse"] },
+  { id: "vid-004", name: "Product Launch Keynote.mp4", type: "video", createdAt: "Apr 1, 2024", lastOpened: "3 days ago", isTrash: false, thumbnail: "https://img.youtube.com/vi/MejbOFk7H6c/hqdefault.jpg", size: "340mb", tags: ["business", "presentation"] },
+  { id: "vid-005", name: "Wildlife Safari.mp4", type: "video", createdAt: "Apr 20, 2024", lastOpened: "yesterday", isTrash: false, thumbnail: "https://img.youtube.com/vi/aBr2kKAHN6M/hqdefault.jpg", size: "175mb", tags: ["wildlife", "nature"] },
+  { id: "vid-006", name: "Cooking Tutorial.mkv", type: "video", createdAt: "May 8, 2024", lastOpened: "5 days ago", isTrash: false, thumbnail: "https://img.youtube.com/vi/fFozKsGuXEM/hqdefault.jpg", size: "95mb", tags: ["cooking", "tutorial"] },
+  { id: "vid-007", name: "Drone Footage Coastline.mp4", type: "video", createdAt: "Jun 2, 2024", lastOpened: "a month ago", isTrash: false, thumbnail: "https://img.youtube.com/vi/N9oxmRT2YWw/hqdefault.jpg", size: "260mb", tags: ["drone", "aerial"] },
+  { id: "vid-008", name: "Team Meeting Recording.mp4", type: "video", createdAt: "Jun 25, 2024", lastOpened: "just now", isTrash: false, thumbnail: "https://img.youtube.com/vi/dQw4w9WgXcQ/hqdefault.jpg", size: "410mb", tags: ["business", "meeting"] },
+  { id: "vid-009", name: "Short Film - Sunrise.mp4", type: "video", createdAt: "Jul 15, 2024", lastOpened: "2 weeks ago", isTrash: false, thumbnail: "https://img.youtube.com/vi/ZbZSe6N_BXs/hqdefault.jpg", size: "530mb", tags: ["film", "creative"] },
+  { id: "vid-010", name: "Gym Workout Session.mkv", type: "video", createdAt: "Aug 3, 2024", lastOpened: "4 days ago", isTrash: false, thumbnail: "https://img.youtube.com/vi/cbKkB3POqaY/hqdefault.jpg", size: "150mb", tags: ["fitness", "tutorial"] },
+];

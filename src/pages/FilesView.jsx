@@ -73,9 +73,7 @@ export default function FilesView({ typeFilter }) {
       isTrash: false,
       thumbnail:
         fileType !== "document"
-          ? `https://picsum.photos/400/260?random=${Math.floor(
-              Math.random() * 100
-            )}`
+          ? `https://img.youtube.com/vi/dQw4w9WgXcQ/hqdefault.jpg`
           : undefined,
     };
 

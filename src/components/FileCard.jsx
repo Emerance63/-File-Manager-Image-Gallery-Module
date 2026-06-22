@@ -69,7 +69,7 @@ export default function FileCard({ file, onAction }) {
     };
   };
 
-  const { icon, bg, color } = getFileIconInfo();
+  const { icon, bg } = getFileIconInfo();
 
   return (
     <div className="bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-all duration-200 overflow-hidden relative flex flex-col h-full group">

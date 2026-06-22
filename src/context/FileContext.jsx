@@ -1,119 +1,12 @@
 import React, { createContext, useContext, useReducer } from "react";
+import { imageData } from "../assets/Data/imageData";
+import { videoData } from "../assets/Data/videoData";
 
 const FileContext = createContext(null);
 
 const initialFiles = [
-  // Images
-  {
-    id: "img-1",
-    name: "Gallery-1234725783.jpg",
-    type: "image",
-    createdAt: "Dec 13, 2020",
-    lastOpened: "just now",
-    isTrash: false,
-    thumbnail: "/hero.png",
-  },
-  {
-    id: "img-2",
-    name: "Gallery-25783.jpg",
-    type: "image",
-    createdAt: "Dec 13, 2020",
-    lastOpened: "2 day ago",
-    isTrash: false,
-    thumbnail: "/hero.png",
-  },
-  {
-    id: "img-3",
-    name: "Gallery-49895383.jpg",
-    type: "image",
-    createdAt: "Dec 13, 2020",
-    lastOpened: "a month ago",
-    isTrash: false,
-    thumbnail: "/hero.png",
-  },
-  {
-    id: "img-4",
-    name: "Gallery-4509853.jpg",
-    type: "image",
-    createdAt: "Dec 13, 2020",
-    lastOpened: "2 day ago",
-    isTrash: false,
-    thumbnail: "/hero.png",
-  },
-  {
-    id: "img-5",
-    name: "Gallery-1004.jpg",
-    type: "image",
-    createdAt: "Dec 13, 2020",
-    lastOpened: "just now",
-    isTrash: false,
-    thumbnail: "/hero.png",
-  },
-  {
-    id: "img-6",
-    name: "Gallery-1005.jpg",
-    type: "image",
-    createdAt: "Dec 13, 2020",
-    lastOpened: "2 days ago",
-    isTrash: false,
-    thumbnail: "/hero.png",
-  },
-  {
-    id: "img-7",
-    name: "Gallery-1006.jpg",
-    type: "image",
-    createdAt: "Dec 13, 2020",
-    lastOpened: "a month ago",
-    isTrash: false,
-    thumbnail: "/hero.png",
-  },
-  {
-    id: "img-8",
-    name: "Gallery-1007.jpg",
-    type: "image",
-    createdAt: "Dec 13, 2020",
-    lastOpened: "a week ago",
-    isTrash: false,
-    thumbnail: "/hero.png",
-  },
-
-  // Videos
-  {
-    id: "vid-1",
-    name: "Video-1234725783.mp4",
-    type: "video",
-    createdAt: "Dec 13, 2020",
-    lastOpened: "just now",
-    isTrash: false,
-    thumbnail: "/hero.png",
-  },
-  {
-    id: "vid-2",
-    name: "Video-25783.mkv",
-    type: "video",
-    createdAt: "Dec 13, 2020",
-    lastOpened: "2 day ago",
-    isTrash: false,
-    thumbnail: "/hero.png",
-  },
-  {
-    id: "vid-3",
-    name: "Video-25783.mkv",
-    type: "video",
-    createdAt: "Dec 13, 2020",
-    lastOpened: "a month ago",
-    isTrash: false,
-    thumbnail: "/hero.png",
-  },
-  {
-    id: "vid-4",
-    name: "Video-49895383.jpg",
-    type: "video",
-    createdAt: "Dec 13, 2020",
-    lastOpened: "a month ago",
-    isTrash: false,
-    thumbnail: "/hero.png",
-  },
+  ...imageData,
+  ...videoData,
 
   // Documents
   {

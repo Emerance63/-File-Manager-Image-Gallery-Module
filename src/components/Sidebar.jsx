@@ -1,5 +1,5 @@
 import React from "react";
-import { FaRegUser, FaFolder, FaTrash, FaVideo, FaImage, FaFile, FaDashcube, FaBookmark, FaFileArchive } from "react-icons/fa";
+import { FaTrash, FaVideo, FaImage, FaFile, FaDashcube } from "react-icons/fa";
 import { FaShoppingCart } from "react-icons/fa";
 import { PiSignOutThin } from "react-icons/pi";
 import { MdHelp } from "react-icons/md";

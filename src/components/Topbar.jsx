@@ -1,11 +1,10 @@
 import React, { useState } from "react";
-import { BiSearch, BiBell, BiCartAlt, BiMenu, BiX, BiChevronDown, BiChevronRight } from "react-icons/bi";
-import { FaHome, FaRegCopy, FaThLarge, FaLayerGroup } from "react-icons/fa";
-import { useFiles } from "../context/FileContext";
+import { BiSearch, BiMenu, BiX, BiChevronDown, BiChevronRight } from "react-icons/bi";
+import { FaHome, FaThLarge, FaLayerGroup } from "react-icons/fa";
 import { FaShoppingCart } from "react-icons/fa";
+import { useFiles } from "../context/FileContext";
 import { IoPerson } from "react-icons/io5";
 import { AiOutlineExpandAlt } from "react-icons/ai";
-import { GrLinkPrevious } from "react-icons/gr";
 import NavDropdown from "./NavDropdown";
 import { homeItems, pagesItems, elementsItems } from "../assets/Data/navData";
 
@@ -30,9 +29,6 @@ export default function Topbar() {
         </div>
 
         <nav className="hidden md:flex items-center gap-6 ml-6 text-sm font-medium text-gray-500">
-          <a href="#" className="hover:text-blue-600 flex items-center gap-2">
-            <GrLinkPrevious className="flex items-center gap-3 bg-blue-600 text-white rounded-full px-2 py-1" /> <span>Image</span>
-          </a>
           <NavDropdown label="Home" icon={<FaHome />} items={homeItems} />
           <NavDropdown label="Pages" icon={<FaThLarge />} items={pagesItems} />
           <NavDropdown label="Elements" icon={<FaThLarge />} items={elementsItems} />
