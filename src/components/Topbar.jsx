@@ -128,7 +128,7 @@ export default function Topbar() {
           <div className="bg-blue-100 text-blue-600 rounded-full p-2">
             <FaLayerGroup className="w-5 h-5" />
           </div>
-          <span className="text-lg font-semibold mr-30">Hope UI</span>
+          <span className="text-lg font-semibold mr-8">Hope UI</span>
         </div>
 
         <nav className="hidden md:flex items-center gap-6 ml-6 text-sm font-medium text-gray-500">
@@ -141,45 +141,57 @@ export default function Topbar() {
         </nav>
       </div>
 
-      <div className="flex items-center gap-3 bg-gray-30 border border-gray-300 rounded-lg px-3 py-1.5 w-80">
-        <BiSearch className="w-3 h-7 text-gray-400" />
-        <input
-          type="text"
-          placeholder="Search..."
-          value={searchQuery}
-          onChange={(e) => setSearchQuery(e.target.value)}
-          className="w-full bg-transparent text-sm focus:outline-none"
-        />
-      </div>
-      <div className="flex items-center gap-3 ml-4">
-        <button className="flex items-center bg-blue-600 text-white rounded-full px-2 py-1">
-          <FaShoppingCart className="w-5 h-5" />
-        </button>
-        <button
-          onClick={() => setPersonOpen(!personOpen)}
-          className="flex items-center gap-3 bg-blue-600 text-white rounded-full px-2 py-1 focus:outline-none"
-        >
-          <IoPerson />
-        </button>
-        {personOpen && (
-          <div className="absolute right-0 mt-10 w-48 bg-white border border-gray-100 rounded-xl shadow-xl py-2 z-50 animate-in fade-in slide-in-from-top-2 duration-150">
-            <div className="flex flex-col gap-0.5">
-              {personItems.map((item, idx) => (
-                <a
-                  key={idx}
-                  href={item.link}
-                  className="block px-3 py-2 text-sm text-gray-600 hover:bg-blue-50 hover:text-blue-600 transition-colors duration-150 rounded-lg font-medium"
-                >
-                  {item.label}
-                </a>
-              ))}
-            </div>
-          </div>
-        )}
+      <div className="flex gap-3">
 
-        <button className="flex items-center bg-blue-600 text-white rounded-full px-2 py-1 hover:bg-blue-700 focus:outline-none">
-          <AiOutlineExpandAlt className="w-5 h-5" />
-        </button>
+        <button className="flex items-center justify-center w-6 h-6 text-gray-600 text-sm rounded-full hover:bg-gray-100 focus:outline-none"><span className="text-lg font-bold">A</span></button>
+        <button className="flex items-center justify-center w-8 h-8 bg-blue-600 text-white rounded-full hover:bg-blue-700 focus:outline-none"><span className="text-xl font-bold">A</span></button>
+        <button className="flex items-center justify-center w-8 h-8 text-gray-600 rounded-full hover:bg-gray-100 focus:outline-none"><span className="text-xl font-bold">A</span></button>
+
+        <div className="flex items-center gap-3 bg-gray-200 border border-gray-300 rounded-lg px-3 py-1.5 w-80">
+          <BiSearch className="w-3 h-7 text-gray-400" />
+          <input
+            type="text"
+            placeholder="Search..."
+            value={searchQuery}
+            onChange={(e) => setSearchQuery(e.target.value)}
+            className="w-full bg-transparent text-sm focus:outline-none"
+          />
+        </div>
+
+        <div className="flex items-center gap-3 ml-4">
+          {/* Shopping Cart */}
+          <button className="flex items-center bg-blue-600 text-white rounded-full px-2 py-1">
+            <FaShoppingCart className="w-5 h-5" />
+          </button>
+          {/* Person Dropdown */}
+          <div className="relative inline-block">
+            <button
+              onClick={() => setPersonOpen(!personOpen)}
+              className="flex items-center gap-3 bg-blue-600 text-white rounded-full px-2 py-1 focus:outline-none"
+            >
+              <IoPerson />
+            </button>
+            {personOpen && (
+              <div className="absolute top-full right-0 mt-2 w-30  bg-white border border-gray-100 rounded-xl shadow-xl py-2  z-50 animate-in fade-in slide-in-from-top-2 duration-150">
+                <div className="flex flex-col gap-0.5">
+                  {personItems.map((item, idx) => (
+                    <a
+                      key={idx}
+                      href={item.link}
+                      className="block px-3 py-2 text-sm text-gray-600 hover:bg-blue-50 hover:text-blue-600 transition-colors duration-150 rounded-lg font-medium"
+                    >
+                      {item.label}
+                    </a>
+                  ))}
+                </div>
+              </div>
+            )}
+          </div>
+          {/* Expand Button */}
+          <button className="flex items-center bg-blue-600 text-white rounded-full px-2 py-1 hover:bg-blue-700 focus:outline-none">
+            <AiOutlineExpandAlt className="w-5 h-5" />
+          </button>
+        </div>
       </div>
     </header>
   );
