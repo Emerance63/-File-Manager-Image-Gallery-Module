@@ -16,7 +16,7 @@ export default function Sidebar() {
     }`;
 
   return (
-    <aside className="hidden lg:flex flex-col w-64 bg-white border-r border-gray-200 p-6">
+    <aside className="hidden lg:flex flex-col  bg-white border-r border-gray-200 p-6 fixed left-0 top-0 w-64 h-screen">
       <div className="flex flex-col items-center gap-3 mb-6">
         <div className="w-17 h-17 rounded-xl overflow-hidden bg-white">
           <img
